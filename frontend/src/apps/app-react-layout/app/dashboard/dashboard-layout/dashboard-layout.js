@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import dispatchManager from './../../../../shared-services/dispatch-manager.js';
+import React, {Component} from '../../../../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import dispatchManager from '../../../../shared-services/dispatch-manager';
 import style from './style.css';
 
 class DashboardLayout extends Component {
@@ -290,7 +290,6 @@ class DashboardLayout extends Component {
     );
   }
 
-  
 }
 
 export default DashboardLayout;
