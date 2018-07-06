@@ -237,7 +237,7 @@ class DashboardLayout extends Component {
           autoAlpha: 1
         });
       }
-      
+
     }
 
     //** layout is ready to go
@@ -290,7 +290,6 @@ class DashboardLayout extends Component {
       </div>
     );
   }
-
   
 }
 
