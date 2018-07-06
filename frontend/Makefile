@@ -50,9 +50,11 @@ setup:
 #**********************************************
 # ::Watches
 #**********************************************
-
+ss:
+	cd ./../output && python -m SimpleHTTPServer
 # dev mode, with hot reload for react component
 devhot:
+	$(MAKE) ss &
 	$(MAKE) _prepare-build
 	$(MAKE) lint-js
 	# launch watch on pure css
@@ -68,6 +70,7 @@ devhot:
 	node pack/server-devhot.js $(SERVER_PROXY)| grep -v \"\\[\\d*\\]\"
 
 dev:
+	$(MAKE) ss &
 	$(MAKE) _prepare-build
 	$(MAKE) lint-js
 	# launch watch on pure css
