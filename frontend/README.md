@@ -14,7 +14,8 @@ then run one of the following:
 - just build dev: `make build-dev` (check out the results on backend server)
 
 ### backend
-(make dev and make devhot open the local server, but if you need to separate, just commend ss in Makefile)
+call make ss from frontend Make
+OR
 cd root/output (!important cd in output, otherwise devhot won't work)
 python -m SimpleHTTPServer
 
