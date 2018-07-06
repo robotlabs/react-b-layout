@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import View from './view/view.js';
 import Dashboard from './dashboard/dashboard.js';
 
 import DataSet from './data/example.json';
@@ -16,33 +15,35 @@ class App extends Component {
       loaded: false
     };
   }
-
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextState.loaded) {
+      return true;
+    }
+    return false;
+  }
   componentDidMount() {
     this.initApp();
   }
 
   initApp() {
-    parser(DataSet)
-      .then((r) => {
-        this.onDataFetched(r);
-      }, () => {
-        console.log(':: fail');
-      });
+    let r = parser(DataSet);
+    this.onDataParsed(r);
   }
 
-  onDataFetched(results) {
+  onDataParsed(results) {
     this.results = results;
     if (results) {
-      if (!this.firstLoad) {
+      if (!this.state.loaded) {
         this.onPageLoaded();
+        //** start render */
+        this.setState({
+          loaded: true
+        });
       }
-      this.setState({
-        loaded: true
-      });
     }
   }
-  onDataFetchedFail(results) {
-    console.log(':: Fail data fetched :', results);
+  onDataFailed(error) {
+    console.log('error :', error);
   }
 
   //** all data are ready for render
@@ -60,11 +61,10 @@ class App extends Component {
   render() {
     return (
       <Dashboard
-            ref={(element) => {
-              this.dashboard = element;
-            }}
-            >
-          </Dashboard>
+        ref={(element) => {
+          this.dashboard = element;
+        }}>
+      </Dashboard>
     );
   }
 }

@@ -1,7 +1,7 @@
 var entryValues = [
   {
-    appName: 'app-react-simple',
-    appEntry: './src/apps/app-react-simple/'
+    appName: 'app-react-layout',
+    appEntry: './src/apps/app-react-layout/'
   }
 ];
 

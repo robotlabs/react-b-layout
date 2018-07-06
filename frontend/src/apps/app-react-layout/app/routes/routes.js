@@ -9,9 +9,9 @@ import {
 import App from './../app';
 function routes(props) {
   return (
-      <Router basename="">
-          <Route component={App}/>
-      </Router>
+    <Router basename="">
+        <Route component={App}/>
+    </Router>
   );
 }
 

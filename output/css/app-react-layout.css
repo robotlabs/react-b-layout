@@ -1,46 +1,29 @@
-.test-3gxIf{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: yellow;
-  font-size: 10em;
-}
-.test-3gxIf span{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.dashboardLayout-1D4zQ{
+.dashboardLayout-24KlS{
   position: absolute;
   top: 0;
   left: 0;
   width: 0;
   height: 0;
 }
-.bottom-3nIKJ{
+.bottom-7TJzw{
   width: 100%;
   height: 0px;
 }
-.box-3pb0X{
+.box-tm0Cy{
   position: absolute;
   background-color: yellow;
-}.box-1vJAY{
+}.box-2EnZS{
   position: absolute;
   background-color: red;
-}.box-ryFqi{
+}.box-36JLw{
   position: absolute;
   background-color: blue;
-}.box-2cDCb{
+}.box-1mCbD{
   position: absolute;
   background-color: green;
 }
 
-.dashboard-10ijO{
+.dashboard-dWIQD{
   position: relative;
   width: auto;
   background-color: undefined;
@@ -50,14 +33,14 @@ h1{
   margin: 0;
 }
 
-.g1-2--Aj{
+.g1-1G1yN{
   width: 100px;
   height: 100px;
   top: 0;
   left: 0;
   background-color: red;
 }
-.copyTest-1j6O5{
+.copyTest-3Wq2v{
   color: white;
   font-size: 20em;
 }

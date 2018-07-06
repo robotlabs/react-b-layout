@@ -17,10 +17,6 @@ class DashboardLayout extends Component {
     window.addEventListener('resize', this.resize.bind(this));
     window.addEventListener('orientationchange', this.resize.bind(this), false);
     dispatchManager.addListener(dispatchManager.flags.REQUEST_LAYOUT_UPDATE, this.requestUpdate.bind(this));
-
-    setInterval(() => {
-      this.updateLayoutRepeater();
-    }, 1000);
   }
   componentWillUnmount() {
     window.removeEventListener('resize', this.resize.bind(this));
@@ -44,18 +40,6 @@ class DashboardLayout extends Component {
     this.updateLayout(true);
   }
 
-  updateLayoutRepeater() {
-    let height = window.innerHeight;
-    let width = window.innerWidth;
-    if (width === this.storeW && height === this.storeH) {
-      return;
-    } else {
-      this.storeW = width;
-      this.storeH = height;
-      this.updateLayout();
-    }
-  }
-
   //** UPDATE LAYOUT
   updateLayout(isResize, props) {
     this.layout = this.props.layout;
@@ -63,8 +47,8 @@ class DashboardLayout extends Component {
     if (!this.layout) {
       return;
     }
-    let height = window.innerHeight;
     let width = window.innerWidth;
+    let height = window.innerHeight;
 
     //** evaluate breakpoints in the layouts, and apply the corresponding
     //** this props.layout is being set in dashboard.js
@@ -73,11 +57,11 @@ class DashboardLayout extends Component {
     for (let i = 0; i < breakpoints.length; i++) {
       let interval = breakpoints[i].interval;
       if (interval[1] === -1) {
-        if (window.innerWidth > interval[0]) {
+        if (width > interval[0]) {
           activeLayout = breakpoints[i].layout;
         }
       } else {
-        if (window.innerWidth > interval[0] && window.innerWidth < interval[1]) {
+        if (width > interval[0] && width < interval[1]) {
           activeLayout = breakpoints[i].layout;
         }
       }
