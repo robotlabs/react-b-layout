@@ -1,0 +1,116 @@
+{
+  "Germany": {
+    "Total Potential": 771060.66,
+    "Summer Pullthrough Potential": "*",
+    "Total Sellin": "*",
+    "Pirelli Sales Summer": -95671.87276,
+    "Gap Summer": -95671.87276,
+    "Market Share": 0.300396599,
+
+    "lands": {
+      "Th\u00fcringen": {
+        "Land": "Th\u00fcringen",
+        "Total Potential (SUM)": 3609.83,
+        "Summer Pullthrough Potential": "*",
+        "Pirelli Sales Summer": -95671.87276,
+        "Gap Summer": -95671.87276,
+        "Pirelli Sales": -95671.87276,
+        "Direct Volumes": -95671.87276,
+        "Indirect Volumes": -95671.87276,
+        "Market Share": 0.300396599,
+        "kreise": {
+          "Erfurt": {
+            "landkreis": "Erfurt",
+            "Total Potential (SUM)": 3609.83,
+            "Summer Pullthrough Potential": "*",
+            "Pirelli Sales": -95671.87276,
+            "Pirelli Sales Summer": -95671.87276,
+            "Direct Volumes": 100,
+            "Indirect Volumes": 120,
+            "Gap Summer": -95671.87276,
+            "Market Share": 0.300396599,
+            "#Pos CarDealer": 38,
+            "#Pos CarDealer Prestige": 2,
+            "CD Prestige Potential": 100,
+            "#Pos TyreTrade": 34,
+            "TT Prestige Potential": 100,
+            "#Pos": 10,
+            "#Pos Direct": 10,
+            "#veichles": 100,
+            "postcodes": [
+              {
+                "postcode": 99092,
+                "Gap Summer": 1000,
+                "car_park": [
+                  {
+                    "Brand": "Porsche",
+                    "Nameplate": "911",
+                    "Program": "911",
+                    "Rim": 19,
+                    "Size": 17,
+                    "#veichles": 411,
+                    "Summer Pullthrough": 100,
+                    "Pirelli Sales (summer)": 100,
+                    "Gap Volumes": 49
+                  }
+                ],
+                "pos": [
+                  {
+                    "PoS Channel": "Car Service",
+                    "Pos Name": "Hoyer Automobile",
+                    "latlong": [49.2, 10.2],
+                    "Address": "*",
+                    "Subtipology": "Porsche",
+                    "Declared Potential": 300,
+                    "Direct Volumes": 12,
+                    "type": "prospect",
+                    "macrotypology": "xxx-macro",
+                    "typology": "xxx-typology",
+                    "Sellin": 15,
+                    "activitiesCRM": [
+                      {
+                        "Pos Name": "bla",
+                        "Category": "**",
+                        "Process Type": "**",
+                        "Priority": "**",
+                        "Status": "**",
+                        "Reason": "**"
+                      },
+                      {
+                        "Pos Name": "bla",
+                        "Category": "**",
+                        "Process Type": "**",
+                        "Priority": "**",
+                        "Status": "**",
+                        "Reason": "**"
+                      }
+                    ]
+
+                  }
+                ]
+              }
+            ],
+            "focus": {
+              "car_park": [
+                {
+                  "Brand": "Porsche",
+                  "Nameplate": "911",
+                  "Program": "911",
+                  "Rim": 19,
+                  "Size": 17,
+                  "#veichles": 411,
+                  "Total Potential": 100,
+                  "Summer Pullthrough": 100,
+                  "Pirelli Sales (summer)": 100,
+                  "Gap Volumes": 49
+                }
+              ],
+              "territory": [
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

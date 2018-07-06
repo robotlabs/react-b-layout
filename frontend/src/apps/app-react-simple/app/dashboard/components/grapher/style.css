@@ -1,0 +1,68 @@
+@value colors: './../../../app-styles/settings/colors.css';
+@value stats-background, page-light-background from colors;
+@value infoH: 35px;
+.graph{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0px;
+  left: 0px;
+  background-color: #1a1f22;
+  overflow: hidden;
+}
+.graph svg{
+  opacity: .99;
+}
+.svgContainer{
+  position: absolute;
+  top: infoH;
+}
+.infoBar{
+  color: white;
+  position: absolute;
+  width: 100%;
+  height: infoH;
+  top: 0;
+  left: 0;
+  background-color: page-light-background;
+  font-size: 0.7em;
+  font-family: 'Gotham-light';
+  z-index: 15;
+}
+.infoBar p{
+  display: inline-block;
+}
+.rollingAreaInfo{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.infoBar p{
+  margin-top: 6px;
+  margin-left: 5px;
+}
+
+/*trend lines*/
+:global(.piecesSeries) {
+  stroke-dasharray: 5, 5;
+  opacity: 0.5;
+  .nv-point {
+    stroke-dasharray: 0;
+  }
+}
+:global(.nv-point) {
+  stroke-opacity: 0.5 !important;
+  stroke-dasharray: 0;
+  stroke-width: 6px;
+}
+:global(.nv-noData) {
+  fill: white !important;
+  font-family: 'Gotham-light';
+}
+:global(.valueSeries) {}
+:global(.nv-wrap.nv-lineChart) {
+  transform: translate(53px, 47px) !important;
+}
+:global(.nv-legendWrap) {
+  top: 10px;
+}

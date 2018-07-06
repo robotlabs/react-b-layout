@@ -1,0 +1,15 @@
+@value colors: './../../app-styles/settings/colors.css';
+@value breakpoints: './../../app-styles/helpers/breakpoints.css';
+
+@value pirelli-yellow, page-light-background from colors;
+@value small, medium, large , superlarge from breakpoints;
+
+.gridTopRight{
+  width: 100%;
+  height: 100%;
+}
+
+.gridBackground{
+  background-color: page-light-background;
+  opacity: .7;
+}

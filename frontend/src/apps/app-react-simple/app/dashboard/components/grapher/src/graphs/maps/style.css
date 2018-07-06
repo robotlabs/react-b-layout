@@ -1,0 +1,5 @@
+:global(.tooltip){
+  color: white;
+  padding: 5px;
+  background-color: rgba(29, 33, 44, 0.7);
+}

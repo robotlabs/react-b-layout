@@ -1,0 +1,137 @@
+@value colors: './../../../../app-styles/settings/colors.css';
+@value stats-background, page-light-background from colors;
+
+.box{
+
+}
+
+
+.datavizBox{
+  position: absolute;
+  font-size: .8em;
+  width: 100%;
+  height: 100%;
+  background-color: page-light-background;
+  color: stats-background;
+  /* overflow: hidden; */
+
+}
+.rr{
+  color: white;
+  min-height: 20px;
+  transition: all 0.4s ease;
+  /* padding-top: 6px; */
+}
+.rr1{
+  /* background-color: #505257; */
+  height: auto;
+  transition: all 0.4s ease;
+}
+.rr2{
+  /* background-color: #757880; */
+  height: auto;
+  transition: all 0.4s ease;
+}
+.dato{
+  margin-left: 5px;
+  transition: all 0.4s ease;
+}
+.gridGap{
+  position: relative;
+  transition: all 0.4s ease;
+}
+.gridPos{
+  margin-top: 20px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+.nodata{
+  color: white;
+}
+
+.gridTitles{
+  color: white;
+  padding-top: 5px;
+  transition: all 0.4s ease;
+  /* background-color: #303135; */
+
+}
+.tableTitlesItem{
+  /* height: 35px; */
+  background-color: ##303135;
+  transition: all 0.4s ease;
+}
+.tableListItem{
+  /* height: 45px; */
+  /* height: 50px; */
+  /* max-height: 50px; */
+  background-color: #303135;
+  transition: all 0.4s ease;
+}
+.tableListItem1{
+  background-color: #757880;
+  transition: all 0.4s ease;
+}
+.tableListItem2{
+  background-color: #505257;
+  transition: all 0.4s ease;
+}
+.tableView{
+  /* overflow-y: scroll; */
+  height: 150px;
+  transition: all 0.4s ease;
+}
+.tableViewBottom{
+
+}
+.byProductListTitle{
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  /* text-transform: uppercase; */
+  margin-top: 15px;
+  margin-bottom: 15px;
+  transition: all 0.4s ease;
+}
+
+.byPosTitle {
+  text-align: center;
+  font-size: 1.4em;
+  color: white;
+  /* text-transform: uppercase; */
+  margin-top: 15px;
+  margin-bottom: 15px;
+  transition: all 0.4s ease;
+}
+.buttonSelection{
+  /* background-color: yellow; */
+}
+.bt{
+  position: relative;
+  background-color: page-light-background;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.btActive{
+  position: relative;
+  background-color: #303135;
+  font-size: 1.2em;
+  color: yellow;
+  user-select: none;
+  transition: all 0.4s ease;
+}
+
+.btContainer{
+  margin-top: 0px;
+  position: relative;
+  /* background-color: red; */
+  margin-bottom: 15px;
+  transition: all 0.4s ease;
+  /* left: 50%; */
+  /* transform: translateX(-20%); */
+}
+
+/* 505257 */
+/* 757880 */

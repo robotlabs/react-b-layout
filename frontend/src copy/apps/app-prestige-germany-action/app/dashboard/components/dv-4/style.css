@@ -1,0 +1,96 @@
+@value colors: './../../../app-styles/settings/colors.css';
+@value stats-background, page-light-background, page-background from colors;
+
+.box{
+  position: absolute;
+}
+
+.datavizBox{
+  position: absolute;
+  font-size: .85em;
+  width: 100%;
+  height: 100%;
+  background-color: page-light-background;
+  color: white;
+}
+.datavizBoxSmall{
+  position: absolute;
+  font-size: 1em;
+  width: 100%;
+  height: 100%;
+  background-color: page-light-background;
+  color: white;
+}
+
+.title {
+  font-size: 1.2em;
+  font-family: 'Gotham-bold';
+  text-transform: uppercase;
+  text-align: right;
+  margin-right: 10px;
+}
+.item{
+  font-family: 'Gotham-bold';
+  font-size: 1.7em;
+  color: stats-background;
+  margin-right: 10px;
+  text-align: right;
+}
+.itemTitle{
+  font-family: 'Gotham-light';
+  font-size: 1.1em;
+  color: white;
+  text-transform: uppercase;
+  text-align: right;
+  margin-right: 10px;
+}
+.titleParagraph{
+  margin-top: 25px;
+  margin-right: 5px;
+  text-align: right;
+  font-family: 'Gotham-bold';
+  color: yellow;
+}
+.itemA{
+  margin-top: 10px;
+  background-color: #3e5163;
+}
+.itemB{
+  margin-top: 10px;
+}
+.itemLandA{
+  margin-top: 10px;
+  font-size: .95em;
+  font-family: 'Gotham-bold';
+  background-color: #3e5163;
+}
+.itemLandB{
+  margin-top: 10px;
+  font-size: .95em;
+}
+
+.itemATotal{
+  padding-top: 10px;
+  background-color: #212c36;
+}
+.itemBTotal{
+  padding-top: 10px;
+  background-color: #141a20;
+}
+
+.itemAs{
+  margin-top: 10px;
+  font-size: .6em;
+  background-color: #3e5163;
+}
+.itemBs{
+  font-size: .6em !important;
+  margin-top: 10px;
+}
+
+.btDrop{
+  font-size: .8em;
+  width: 100%;
+  position: absolute;
+  top: -50px;
+}

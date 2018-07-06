@@ -1,0 +1,68 @@
+.carparcContainer{
+  opacity: 0;
+  position: relative;
+}
+
+.titleTab{
+  background-color: #0d0e13;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-family: 'Gotham-bold';
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+.titleItemsLength{
+  position: absolute;
+  right: 0;
+  top: 0;
+  /* background-color: yellow; */
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-family: 'Gotham-bold';
+  text-transform: uppercase;
+  font-size: 1.2em;
+  z-index: 1141;
+  color: white;
+  opacity: .9;
+}
+
+.itemsLengthTable{
+  display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+.itemsLengthList{
+	list-style: none;
+}
+.itemsLengthList li{
+  display: inline;
+}
+.borderItems{
+  padding-right: 10px;
+  border-right: 1px solid yellow;
+}
+.clicked{
+  color: yellow;
+}
+
+.notClicked{
+  cursor: pointer;
+  color: white;
+  opacity: .9;
+}
+.notClicked:hover{
+  color: yellow;
+}
+.applyFade{
+  /* opacity: 1; */
+  animation: fadeIn .5s 0s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

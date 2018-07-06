@@ -1,0 +1,222 @@
+@value hoverColor: #d5bc13;
+@value selectedColor: rgba(224,178,11,1);
+.row{
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 48px;
+
+  background-color: yellow;
+}
+
+.rowLevel1{
+  position: absolute;
+  left: 0;
+  width: 40%;
+  background-color: red;
+}
+.rowValues{
+  position: absolute;
+  background-color: black
+}
+
+.block{
+  position: relative;
+  width: 100px;
+  height: 30px;
+  background-color: red;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  color: white;
+  transition: all 0.3s ease;
+}
+.tableBodyContainer50{
+  position: relative;
+  overflow-y: scroll;
+  height: calc(100% - 50px);
+}
+.tableBodyContainer100{
+  position: relative;
+  overflow-y: scroll;
+  height: calc(100% - 100px);
+}
+.containerLev1{
+  z-index: 901;
+}
+.containerLev2{
+  z-index: 801;
+}
+
+.tabellaOverflow{
+  overflow: hidden;
+  height: auto;
+}
+.tabellaLev2Out{
+  height: 0;
+  z-index: 801;
+}
+.tabellaLev3Out{
+  z-index: 701;
+}
+.gx{
+  padding: 0;
+  margin: 0;
+  position: relative;
+  min-height: 50px;
+  font-family: 'Gotham-light';
+  font-size: 14;
+}
+
+.gxSmall{
+  padding: 0;
+  margin: 0;
+  position: relative;
+  min-height: 30px;
+  font-family: 'Gotham-light';
+  font-size: 13;
+}
+.gx span{
+  position: absolute;
+  top: 50%;
+  margin-left: 10px;
+  transform: translateY(-50%);
+  /* color: white; */
+}
+.gxSmall span{
+  position: absolute;
+  top: 50%;
+  margin-left: 10px;
+  transform: translateY(-50%);
+}
+.gValues{
+  position: absolute;
+  border-left: 1px solid rgba(255,255,255,.2);
+}
+.gValuesNoBorder{
+  position: absolute;
+  border-left: 0px;
+}
+.gSuperSize{
+  min-height: 90px;
+}
+.gColorAHover{
+  cursor: pointer;
+}
+.gColorA{
+  background-color: #5f6269;
+}
+.gColorAHover:hover{
+  background-color: hoverColor;
+  color: black !important;
+}
+.gColorAClicked{
+  background-color: selectedColor !important;
+  color: black !important;
+}
+
+.gColorBHover{
+  cursor: pointer;
+}
+.gColorB{
+  background-color: #505257;
+}
+.gColorBHover:hover{
+  background-color: hoverColor;
+  color: black !important;
+}
+.gColorYellow{
+  background-color: black;
+}
+.gColorBlack{
+  background-color: black;
+}
+.gColor2A{
+  background-color: #595732;
+}
+.gColor2B{
+  background-color: #53512f;/*#626037;*/
+}
+
+.gColor2A2{
+  background-color: #595732;
+}
+.gColor2B2{
+  background-color: #53512f;/*#626037;*/
+}
+
+.gColor2A:hover{
+  background-color: hoverColor;
+  color: black !important;
+}
+.gColor2B:hover{
+  background-color: hoverColor;
+  color: black !important;
+}
+.gColor2Clicked{
+  background-color: selectedColor !important;
+  color: black !important;
+}
+
+.gColor3A{
+  background-color: #2a280d;
+}
+.gColor3A:hover{
+  background-color: hoverColor;
+  color: black !important;
+}
+.gColor3B{
+  background-color: #25240c;
+}
+.gColor3B:hover{
+  background-color: hoverColor;
+  color: black !important;
+}
+.gColor3Clicked{
+  background-color: selectedColor !important;
+  color: black !important;
+}
+.gColorHeader{
+  font-family: 'Gotham-bold';
+  background-color: #303135;
+}
+
+.gLev1{
+
+}
+.gLev2 span{
+  margin-left: 20px;
+}
+.gLev3 span{
+  margin-left: 40px;
+}
+.gLev4 span{
+  margin-left: 60px;
+}
+
+.grid10 {
+  width: calc(10% - 0px);
+}
+.grid20 {
+  width: calc(20% - 0px);
+}
+.grid30 {
+  width: calc(30% - 0px);
+}
+.grid40 {
+  width: calc(40% - 0px);
+}
+.grid50 {
+  width: calc(50%);
+}
+.grid60 {
+  width: calc(60% - 0px);
+}
+.grid70 {
+  width: calc(60% - 0px);
+}
+.grid100 {
+  width: calc(100% - 0px);
+}

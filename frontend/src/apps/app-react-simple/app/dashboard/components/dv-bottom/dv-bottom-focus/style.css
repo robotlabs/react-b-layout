@@ -1,0 +1,136 @@
+@value colors: './../../../../app-styles/settings/colors.css';
+@value stats-background, page-light-background, pirelli-yellow from colors;
+
+.box{
+  position: absolute;
+  z-index: 11;
+}
+
+.datavizBox{
+  position: absolute;
+  font-size: 1em;
+  width: 100%;
+  height: 100%;
+  background-color: page-light-background;
+  color: stats-background;
+}
+.focusHeader{
+  position:relative;
+  height: 50px;
+  width: 100%;
+  background-color: #0d0e13;
+  font-family: 'Gotham-bold';
+  font-size: 1.5em;
+}
+.focusHeader span{
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+.rr{
+  color: white;
+  min-height: 20px;
+  transition: all 0.4s ease;
+  /* padding-top: 6px; */
+}
+.rr1{
+  height: auto;
+  transition: all 0.4s ease;
+}
+.rr2{
+  height: auto;
+  transition: all 0.4s ease;
+}
+.dato{
+  margin-left: 5px;
+  transition: all 0.4s ease;
+  text-transform: capitalize;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.dato:hover{
+  overflow: visible;
+  /* background-color: black; */
+  /* width: 100%; */
+}
+
+.gridTitles{
+  color: white;
+  /* padding-top: 5px; */
+  transition: all 0.4s ease;
+}
+.tableTitlesItem{
+  background-color: #303135;
+  transition: all 0.4s ease;
+}
+.tableListItem{
+  background-color: #303135;
+  transition: all 0.4s ease;
+}
+.tableListItem1{
+  background-color: #757880;
+  transition: all 0.4s ease;
+}
+.tableListItem2{
+  background-color: #505257;
+  transition: all 0.4s ease;
+}
+.tableView{
+  /* height: 150px; */
+  transition: all 0.4s ease;
+}
+
+.loading{
+  position: absolute;
+  width: 100%;
+  color: pirelli-yellow;
+  top: 100px;
+  font-size: 3em;
+  text-align: center;
+  margin: auto;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  opacity: 0;
+  animation: fadeIn 2.5s 0.2s;
+  animation-fill-mode: forwards;
+}
+.mainContainer{
+  opacity: 0;
+  animation: fadeIn 1.5s 0s;
+  animation-fill-mode: forwards;
+  /* overflow: scroll; */
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tableCellContent{
+  /* border: 0; */
+  /* max-height: 80px; */
+  /* overflow: hidden; */
+}
+
+/* .root{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: hidden;
+  background-color: yellow;
+}
+.gridList {
+    width: 500;
+    height: 450;
+  } */
+/* display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    overflow: 'hidden',
+    backgroundColor: theme.palette.background.paper, */

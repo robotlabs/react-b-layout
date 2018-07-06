@@ -1,0 +1,26 @@
+.itemsLengthTable{
+  display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+.itemsLengthList{
+	list-style: none;
+}
+.itemsLengthList li{
+  display: inline;
+}
+.borderItems{
+  padding-right: 10px;
+  border-right: 1px solid yellow;
+}
+.clicked{
+  color: yellow;
+}
+
+.notClicked{
+  cursor: pointer;
+  color: white;
+  opacity: .9;
+}
+.notClicked:hover{
+  color: yellow;
+}
