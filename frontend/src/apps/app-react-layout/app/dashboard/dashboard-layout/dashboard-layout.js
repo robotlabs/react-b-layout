@@ -86,9 +86,6 @@ class DashboardLayout extends Component {
     let arrTweens = [];
     let rows = layout.rows;
     let margins = layout.margins;
-    let cr = rows.length;
-    let ww = width;
-    let hh = height;
     let totalH = 0;
     let columnSizeCalculator = {};
 
@@ -98,10 +95,10 @@ class DashboardLayout extends Component {
       let comp = this.refs[overlay.id];
       comp.visible = true;
       let div = comp.node;
-      let w = (ww * overlay.w) / 100;
-      let h = (hh * overlay.h) / 100 - margins * 2;
-      let l = (ww * overlay.l) / 100 + margins;
-      let t = (hh * overlay.t) / 100 + margins;
+      let w = (width * overlay.w) / 100;
+      let h = (height * overlay.h) / 100 - margins * 2;
+      let l = (width * overlay.l) / 100 - margins;
+      let t = (height * overlay.t) / 100 + margins;
       let tw = new TweenMax.to(div, 1, { // eslint-disable-line new-cap
         width: w,
         left: l,
@@ -110,17 +107,19 @@ class DashboardLayout extends Component {
         ease: window.Power4.easeOut,
         force3D: true
       });
-      div.style.display = 'block';
       arrTweens.push(tw);
+      div.style.display = 'block';
+      div.style.zIndex = 10;
     }
+
     //** height  without margins
-    let hhh = hh - margins * (cr + 1);
+    let hhh = height - margins * (rows.length + 1);
     //** loop the rows
-    for (let j = 0; j < cr; j++) {
+    for (let j = 0; j < rows.length; j++) {
       let row = layout.rows[j];
       let cl = row.columns.length;
       //** total width needed without margins
-      let www = ww - margins * (cl + 1);
+      let www = width - margins * (cl + 1);
       let prevRowH = 0;
       let prevRowT = 0;
       //** it is not the first row, get previous row height and previouw row top, for positioning
@@ -132,19 +131,13 @@ class DashboardLayout extends Component {
       //** loop the columns
       for (let i = 0; i < cl; i++) {
         let column = row.columns[i];
-        let prevColumnW = 0;
-        let prevColumnL = 0;
-        //** it is not the first column, get previous column width and previous column left, for positioning
-        if (i > 0) {
-          let prevColumn = row.columns[i - 1];
-          prevColumnW = this.refs[prevColumn.id].storeW;
-          prevColumnL = this.refs[prevColumn.id].storeL;
-        }
+        let prevColumnW = this.getPrevColumnW(i, row);
+        let prevColumnL = this.getPrevColumnL(i, row);
 
         //** get component from refs and set it visible.
         let comp = this.refs[column.id];
-        
         comp.visible = true;
+
         //**get div and calculate size and position
         let div = comp.node;
         let w = (www * column.w) / 100;
@@ -153,7 +146,7 @@ class DashboardLayout extends Component {
         //** optional column height. in case the component need to be higher, in height, than his row
         //** if parameter h (optional) is set in layout
         if (column.h) {
-          h = (hhh * column.h) / 100 + margins;//YODO make this dynamic. now works only for one column more
+          h = (hhh * column.h) / 100 + margins;//TODO make this dynamic. now works only for one column
         } else {
           h = rowH;
         }
@@ -166,7 +159,7 @@ class DashboardLayout extends Component {
         let t = margins + prevRowH + prevRowT;
         //** dont set h if we are in auto.
         if (row.h === 'auto') {
-          h = div.offsetHeight + 0;
+          h = div.offsetHeight;
           var tw = new TweenMax.to(div, 1, { // eslint-disable-line new-cap
             width: w,
             left: l,
@@ -228,11 +221,10 @@ class DashboardLayout extends Component {
       this.bottom.style.height = 0 + 'px';
       this.bottom.style.top = lastT + lastH + 'px';
     }
-    //** remove the not defined component in the layout
+    //** remove the not defined component in the layout or show
     for (let m in this.refs) {
       if (!this.refs[m].visible) {
         let div = this.refs[m].node;
-
         TweenMax.to(div, .5, {
           autoAlpha: 0,
           onComplete: this.divHidden,
@@ -252,6 +244,23 @@ class DashboardLayout extends Component {
     movesTl
         .add(arrTweens);
     movesTl.play();
+  }
+
+  getPrevColumnW(i, row) {
+    //** it is not the first column, get previous column width and previous column left, for positioning
+    if (i > 0) {
+      let prevColumn = row.columns[i - 1];
+      return this.refs[prevColumn.id].storeW;
+    }
+    return 0;
+  }
+  getPrevColumnL(i, row) {
+    //** it is not the first column, get previous column width and previous column left, for positioning
+    if (i > 0) {
+      let prevColumn = row.columns[i - 1];
+      return this.refs[prevColumn.id].storeL;
+    }
+    return 0;
   }
   divHidden(div) {
     div.style.display = 'none';
@@ -280,6 +289,8 @@ class DashboardLayout extends Component {
       </div>
     );
   }
+
+  
 }
 
 export default DashboardLayout;
