@@ -1,5 +1,5 @@
-import React, {Component} from '../../../../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
-import dispatchManager from '../../../../shared-services/dispatch-manager';
+import React, {Component} from 'react';
+import dispatchManager from './../../../../shared-services/dispatch-manager.js';
 import style from './style.css';
 
 class DashboardLayout extends Component {
@@ -237,6 +237,7 @@ class DashboardLayout extends Component {
           autoAlpha: 1
         });
       }
+      
     }
 
     //** layout is ready to go
@@ -255,7 +256,7 @@ class DashboardLayout extends Component {
     return 0;
   }
   getPrevColumnL(i, row) {
-    //** it is not the first column, get previous column width and previous column left, for positioning
+    
     if (i > 0) {
       let prevColumn = row.columns[i - 1];
       return this.refs[prevColumn.id].storeL;
@@ -290,6 +291,7 @@ class DashboardLayout extends Component {
     );
   }
 
+  
 }
 
 export default DashboardLayout;
